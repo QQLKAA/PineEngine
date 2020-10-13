@@ -1,3 +1,6 @@
 [submodule "pine/libs/glfw"]
 	path = pine/libs/glfw
 	url = https://github.com/glfw/glfw
+[submodule "pine/libs/spdlog"]
+	path = pine/libs/spdlog
+	url = https://github.com/gabime/spdlog

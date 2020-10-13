@@ -1,4 +1,5 @@
 #include <pine.h>
+#include <spdlog/spdlog.h>
 
 int main() {
   bool error;
@@ -6,6 +7,8 @@ int main() {
   if (error) {
     return 1;
   }
+
+  spdlog::info("Hello, world!");
 
   while (window.isOpen()) {
     window.update();
