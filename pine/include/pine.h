@@ -1,10 +1,3 @@
 #pragma once
 
-namespace Pine {
-
-class Hello {
-public:
-	void print();
-};
-
-}
+#include "pine/window.h"

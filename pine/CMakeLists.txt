@@ -1,5 +1,7 @@
 add_library(pine STATIC
-  src/pine.cc)
+  src/window.cc)
+
+target_compile_features(pine PUBLIC cxx_std_17)
 
 target_include_directories(pine PUBLIC include)
 
