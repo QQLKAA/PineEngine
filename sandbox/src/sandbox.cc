@@ -2,13 +2,15 @@
 #include <spdlog/spdlog.h>
 
 int main() {
+  Pine::Log::init();
+
   bool error;
   Pine::Window window(error, 1280, 720, "PineEngine Sandbox");
   if (error) {
     return 1;
   }
 
-  spdlog::info("Hello, world!");
+  APP_INFO("Error is {}", error);
 
   while (window.isOpen()) {
     window.update();
