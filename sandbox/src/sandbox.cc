@@ -1,5 +1,5 @@
+#include <glad/glad.h>
 #include <pine.h>
-#include <spdlog/spdlog.h>
 
 int main() {
   Pine::Log::init();
@@ -13,6 +13,9 @@ int main() {
   APP_INFO("Error is {}", error);
 
   while (window.isOpen()) {
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+
     window.update();
   }
 

@@ -17,9 +17,14 @@ public:
     return s_appLogger;
   }
 
+  inline static std::shared_ptr<spdlog::logger> getGLLogger() {
+    return s_openGLLogger;
+  }
+
 private:
   static std::shared_ptr<spdlog::logger> s_engineLogger;
   static std::shared_ptr<spdlog::logger> s_appLogger;
+  static std::shared_ptr<spdlog::logger> s_openGLLogger;
 };
 
 }
@@ -37,3 +42,10 @@ private:
 #define APP_WARN(...) Pine::Log::getAppLogger()->warn(__VA_ARGS__)
 #define APP_ERROR(...) Pine::Log::getAppLogger()->error(__VA_ARGS__)
 #define APP_CRITICAL(...) Pine::Log::getAppLogger()->critical(__VA_ARGS__)
+
+#define OGL_TRACE(...) Pine::Log::getGLLogger()->trace(__VA_ARGS__)
+#define OGL_DEBUG(...) Pine::Log::getGLLogger()->debug(__VA_ARGS__)
+#define OGL_INFO(...) Pine::Log::getGLLogger()->info(__VA_ARGS__)
+#define OGL_WARN(...) Pine::Log::getGLLogger()->warn(__VA_ARGS__)
+#define OGL_ERROR(...) Pine::Log::getGLLogger()->error(__VA_ARGS__)
+#define OGL_CRITICAL(...) Pine::Log::getGLLogger()->critical(__VA_ARGS__)
