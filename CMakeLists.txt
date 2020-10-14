@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.18)
 
 project(
   PineEngine
-  LANGUAGES CXX)
+  LANGUAGES C CXX)
 
 if(MINGW)
   set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static")

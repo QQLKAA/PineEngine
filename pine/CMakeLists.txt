@@ -12,5 +12,8 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(libs/glfw)
 
 add_subdirectory(libs/spdlog)
+add_subdirectory(libs/glad)
 
-target_link_libraries(pine glfw spdlog::spdlog)
+find_package(OpenGL REQUIRED)
+
+target_link_libraries(pine glfw spdlog::spdlog OpenGL::GL glad)
