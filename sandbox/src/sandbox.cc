@@ -9,8 +9,12 @@ int main() {
   if (error) {
     return 1;
   }
-
-  APP_INFO("Error is {}", error);
+  
+  auto shader = std::make_shared<Pine::Shader>(
+      error, "assets/shaders/basic.glsl");
+  if (error) {
+    return 1;
+  }
 
   while (window.isOpen()) {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -34,6 +38,7 @@ int main() {
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 3, 
                           reinterpret_cast<void*>(0));
     
+    shader->bind();
     glDrawArrays(GL_TRIANGLES, 0, 3);
 
     glDeleteVertexArrays(1, &vao);

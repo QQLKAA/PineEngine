@@ -1,5 +1,6 @@
 add_library(pine STATIC
   src/log.cc
+  src/shader.cc
   src/window.cc)
 
 target_compile_features(pine PUBLIC cxx_std_17)
