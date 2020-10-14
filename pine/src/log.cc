@@ -14,7 +14,7 @@ void Log::init() {
   s_appLogger->set_level(spdlog::level::trace);
 
   s_openGLLogger = spdlog::stdout_color_mt("OpenGL");
-  s_openGLLogger->set_level(spdlog::level::trace);
+  s_openGLLogger->set_level(spdlog::level::info);
 }
 
 }
